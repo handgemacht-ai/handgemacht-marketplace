@@ -8,7 +8,7 @@ route them to your coding agent for fast, context-rich fixes.
 
 ```
 /plugin marketplace add handgemacht-ai/handgemacht-marketplace
-/plugin install havi@handgemacht-marketplace
+/plugin install havi@handgemacht
 ```
 
 Then follow the guided setup at <https://havi.handgemacht.ai/try>.
