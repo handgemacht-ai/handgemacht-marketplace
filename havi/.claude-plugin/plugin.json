@@ -1,0 +1,7 @@
+{
+  "name": "havi",
+  "version": "0.3.0",
+  "description": "HAVI annotation platform — review and resolve visual annotations captured from the browser",
+  "keywords": ["annotation", "visual-qa", "w3c"],
+  "hooks": "./hooks/hooks.json"
+}
