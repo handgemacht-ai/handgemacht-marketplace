@@ -9,7 +9,7 @@ the credentials shown on the HAVI `/try` connect page:
 
 ```
 /plugin marketplace add handgemacht-ai/handgemacht-marketplace
-/plugin install havi@handgemacht-marketplace
+/plugin install havi@handgemacht
 /havi-setup <hosted-mcp-url> <setup-code>
 ```
 
