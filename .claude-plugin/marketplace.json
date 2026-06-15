@@ -5,17 +5,17 @@
     "url": "https://github.com/handgemacht-ai"
   },
   "metadata": {
-    "description": "Public Claude Code marketplace for HAVI — capture visual annotations from any web page and route them to your coding agent.",
-    "version": "0.3.0"
+    "description": "HAVI setup and annotation workflow for outside users.",
+    "version": "0.3.1"
   },
   "plugins": [
     {
       "name": "havi",
-      "source": "./havi",
-      "description": "HAVI annotation platform — review and resolve visual annotations captured from the browser. Includes /havi-setup for one-shot hosted connection.",
-      "keywords": ["annotation", "visual-qa", "w3c"],
+      "source": "./plugins/havi",
+      "description": "Connect Claude Code to HAVI for visual annotation review and setup guidance.",
+      "keywords": ["annotation", "visual-qa", "setup", "workspace"],
       "category": "developer-tools",
-      "homepage": "https://havi.handgemacht.ai"
+      "homepage": "https://github.com/handgemacht-ai/handgemacht-marketplace"
     }
   ]
 }

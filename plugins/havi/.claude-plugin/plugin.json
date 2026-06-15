@@ -1,0 +1,10 @@
+{
+  "name": "havi",
+  "version": "0.3.1",
+  "description": "Connect Claude Code to HAVI for setup and visual annotation review.",
+  "author": {
+    "name": "Handgemacht",
+    "url": "https://github.com/handgemacht-ai"
+  },
+  "keywords": ["annotation", "visual-qa", "setup", "workspace"]
+}

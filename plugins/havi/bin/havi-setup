@@ -33,7 +33,7 @@ RESPONSE=$(curl -fsS -w '\n%{http_code}' -X POST "$EXCHANGE_URL" \
   exit 1
 }
 
-HTTP_BODY=$(printf '%s' "$RESPONSE" | head -n -1)
+HTTP_BODY=$(printf '%s' "$RESPONSE" | sed '$d')
 HTTP_CODE=$(printf '%s' "$RESPONSE" | tail -n 1)
 
 case "$HTTP_CODE" in

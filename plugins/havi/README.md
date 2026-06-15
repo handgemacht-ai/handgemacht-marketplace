@@ -1,11 +1,11 @@
-# HAVI Plugin
+# HAVI Plugin Package
 
-Claude Code plugin for the HAVI hosted annotation service.
+This package is shared by the public Claude Code and Codex marketplaces.
 
 ## Setup
 
-Add the public marketplace, install the plugin, then run the setup command with
-the credentials shown on the HAVI `/try` connect page:
+Install the plugin and run the setup command with the credentials shown on the
+HAVI `/try` connect page:
 
 ```
 /plugin marketplace add handgemacht-ai/handgemacht-marketplace
@@ -16,7 +16,7 @@ the credentials shown on the HAVI `/try` connect page:
 For example:
 
 ```
-/havi-setup https://havi.handgemacht.ai/api/mcp ABC123
+/havi-setup https://havi.ai/api/mcp ABC123
 ```
 
 `havi-setup` exchanges the short-lived setup code for a bearer token and writes
@@ -25,4 +25,13 @@ no binary to install. Restart Claude Code after setup completes.
 
 The setup code expires quickly. Generate a fresh one on the `/try` connect page
 each time you run `havi-setup`. Never paste a raw bearer token into the command;
-always use a setup code from the connect page.
+always use a setup code from the dashboard.
+
+## Package rules
+
+The public package must stay safe to publish:
+
+- no private `handgemacht-ai/havi` source URLs as install sources
+- no raw auth tokens
+- no internal credentials
+- no Handgemacht-only setup instructions

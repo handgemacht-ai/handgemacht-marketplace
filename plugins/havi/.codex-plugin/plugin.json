@@ -1,0 +1,29 @@
+{
+  "name": "havi",
+  "version": "0.3.1",
+  "description": "Connect Codex to HAVI for setup and visual annotation review.",
+  "author": {
+    "name": "Handgemacht",
+    "url": "https://github.com/handgemacht-ai"
+  },
+  "homepage": "https://github.com/handgemacht-ai/handgemacht-marketplace",
+  "repository": "https://github.com/handgemacht-ai/handgemacht-marketplace",
+  "license": "UNLICENSED",
+  "keywords": ["annotation", "visual-qa", "setup", "workspace"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "HAVI",
+    "shortDescription": "Connect Codex to your HAVI workspace.",
+    "longDescription": "HAVI helps outside users connect Codex to the right account and workspace for visual annotation review.",
+    "developerName": "Handgemacht",
+    "category": "Developer Tools",
+    "capabilities": ["MCP", "Workflow"],
+    "websiteURL": "https://github.com/handgemacht-ai/handgemacht-marketplace",
+    "defaultPrompt": [
+      "Set up HAVI for this workspace.",
+      "Check my HAVI connection status.",
+      "Review HAVI annotations for this repo."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

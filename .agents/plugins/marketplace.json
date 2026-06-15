@@ -1,0 +1,20 @@
+{
+  "name": "handgemacht",
+  "interface": {
+    "displayName": "HAVI"
+  },
+  "plugins": [
+    {
+      "name": "havi",
+      "source": {
+        "source": "local",
+        "path": "./plugins/havi"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
