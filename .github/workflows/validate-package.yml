@@ -1,0 +1,14 @@
+name: validate-package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate marketplace package
+        run: bash scripts/validate-package.sh
