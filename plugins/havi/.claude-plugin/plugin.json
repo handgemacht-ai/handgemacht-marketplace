@@ -1,10 +1,11 @@
 {
   "name": "havi",
-  "version": "0.4.0",
-  "description": "Connect Claude Code to HAVI for setup and visual annotation review.",
+  "version": "0.5.0",
+  "description": "Connect Claude Code to HAVI for visual annotation review. Log in with /mcp.",
   "author": {
     "name": "Handgemacht",
     "url": "https://github.com/handgemacht-ai"
   },
-  "keywords": ["annotation", "visual-qa", "setup", "workspace"]
+  "keywords": ["annotation", "visual-qa", "setup", "workspace"],
+  "mcpServers": "./.mcp.json"
 }

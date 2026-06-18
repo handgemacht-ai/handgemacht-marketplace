@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "havi": {
+      "type": "http",
+      "url": "https://havi.handgemacht.ai/api/mcp"
+    }
+  }
+}

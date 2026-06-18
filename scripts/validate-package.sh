@@ -37,11 +37,16 @@ codex="$ROOT/plugins/havi/.codex-plugin/plugin.json"
 eq "$(jqr "$claude" '.name')" "havi" "claude plugin.json name"
 eq "$(jqr "$codex" '.name')" "havi" "codex plugin.json name"
 eq "$(jqr "$claude" '.version')" "$(jqr "$codex" '.version')" "manifest version parity"
-eq "$(jqr "$claude" 'has("mcpServers")')" "false" "claude plugin.json must not declare mcpServers"
+# Claude Code bundles the hosted MCP server so `/mcp` can log in via OAuth.
+# Codex has no in-app OAuth and still connects through the havi-setup runner,
+# so it must not declare a bundled server.
+eq "$(jqr "$claude" '.mcpServers')" "./.mcp.json" "claude plugin.json must bundle ./.mcp.json"
 eq "$(jqr "$codex" 'has("mcpServers")')" "false" "codex plugin.json must not declare mcpServers"
 eq "$(jqr "$codex" '.skills')" "./skills/" "codex skills path"
-[ ! -f "$ROOT/plugins/havi/.mcp.json" ] || err "plugins/havi/.mcp.json must not be published"
-[ -f "$ROOT/plugins/havi/hooks/hooks.json" ] || err "plugins/havi/hooks/hooks.json missing"
+mcp="$ROOT/plugins/havi/.mcp.json"
+[ -f "$mcp" ] || err "plugins/havi/.mcp.json missing"
+eq "$(jqr "$mcp" '.mcpServers.havi.type')" "http" "bundled mcp server must use http transport"
+grep -q "/api/mcp" "$mcp" || err "bundled mcp server must point at the hosted /api/mcp endpoint"
 
 # 4. Public package includes setup runner and public installer
 inst="$ROOT/install.sh"

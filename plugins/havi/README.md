@@ -2,30 +2,45 @@
 
 This package is shared by the public Claude Code and Codex marketplaces.
 
-## Setup
+## Claude Code
 
-Install the plugin and run the setup command with the credentials shown on the
-HAVI `/try` connect page:
+Install the plugin, then log in with `/mcp`:
 
 ```
 /plugin marketplace add handgemacht-ai/handgemacht-marketplace
 /plugin install havi@handgemacht
-/havi-setup <hosted-mcp-url> <setup-code>
+/mcp
+```
+
+The plugin bundles the hosted HAVI MCP server (`./.mcp.json`), so `/mcp` lists
+`havi` directly. Select **havi → Authenticate** and confirm in the browser. No
+setup code, no token to paste, and no local server.
+
+Once connected, the server provides slash-command prompts (`review`, `triage`,
+`resolve`) that walk the agent through annotation review for the current repo.
+
+## Codex
+
+Codex has no in-app OAuth login, so it still uses a one-time setup code from the
+HAVI `/try` connect page:
+
+```
+codex plugin marketplace add handgemacht-ai/handgemacht-marketplace
+codex plugin add havi@handgemacht
+codex havi-setup <hosted-mcp-url> <setup-code>
 ```
 
 For example:
 
 ```
-/havi-setup https://havi.ai/api/mcp ABC123
+codex havi-setup https://havi.handgemacht.ai/api/mcp ABC123
 ```
 
 `havi-setup` exchanges the short-lived setup code for a bearer token and writes
-the hosted `/api/mcp` server into your Claude Code MCP config — no local server,
-no binary to install. Restart Claude Code after setup completes.
-
-The setup code expires quickly. Generate a fresh one on the `/try` connect page
-each time you run `havi-setup`. Never paste a raw bearer token into the command;
-always use a setup code from the dashboard.
+the hosted `/api/mcp` server into your MCP config — no local server, no binary to
+install. The setup code expires quickly; generate a fresh one on the `/try`
+connect page each time. Never paste a raw bearer token into the command; always
+use a setup code from the dashboard.
 
 ## Package rules
 
