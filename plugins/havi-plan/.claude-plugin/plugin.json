@@ -1,0 +1,11 @@
+{
+  "name": "havi-plan",
+  "version": "0.1.0",
+  "description": "Human plan review for Claude Code: submitted plans open in the browser for markup with HAVI annotations before the agent proceeds.",
+  "author": {
+    "name": "Handgemacht",
+    "url": "https://github.com/handgemacht-ai"
+  },
+  "keywords": ["plan-review", "annotation", "visual-qa", "hooks", "workflow"],
+  "hooks": "./hooks/hooks.json"
+}
