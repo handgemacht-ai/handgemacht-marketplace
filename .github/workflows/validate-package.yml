@@ -12,3 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate marketplace package
         run: bash scripts/validate-package.sh
+      - name: Run havi-plan hook tests
+        run: python3 -m unittest discover -s plugins/havi-plan/tests -p 'test_*.py'

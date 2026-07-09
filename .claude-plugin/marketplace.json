@@ -16,6 +16,14 @@
       "keywords": ["annotation", "visual-qa", "setup", "workspace"],
       "category": "developer-tools",
       "homepage": "https://github.com/handgemacht-ai/handgemacht-marketplace"
+    },
+    {
+      "name": "havi-plan",
+      "source": "./plugins/havi-plan",
+      "description": "Human plan review for Claude Code: submitted plans open in the browser for HAVI annotation markup before the agent proceeds.",
+      "keywords": ["plan-review", "annotation", "visual-qa", "hooks", "workflow"],
+      "category": "developer-tools",
+      "homepage": "https://github.com/handgemacht-ai/handgemacht-marketplace"
     }
   ]
 }
