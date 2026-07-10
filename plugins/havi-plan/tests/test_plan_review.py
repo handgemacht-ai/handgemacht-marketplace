@@ -128,6 +128,11 @@ class PlanReviewHookTest(unittest.TestCase):
                 self.assertIn("Do the", page)
                 self.assertIn("<strong>thing</strong>", page)
                 self.assertIn("<code>care</code>", page)
+                # Confirmation row must ship hidden until a button is clicked,
+                # and the hidden attribute must win over the flex display rules.
+                self.assertIn('id="done" hidden', page)
+                self.assertNotIn('id="actions" hidden', page)
+                self.assertIn("[hidden] { display: none !important; }", page)
                 self._post_decision(url, "approve")
                 out, err = proc.communicate(timeout=30)
             finally:
