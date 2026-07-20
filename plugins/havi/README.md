@@ -92,7 +92,7 @@ restart the dev server after switching branches — `branch` and `commit` are re
 at boot and stay stale until then.
 
 - `framework` (optional) — one of `nextjs`, `vite`, or `phoenix` returns just that framework's template.
-- Omit it and the agent detects the framework from config files (`next.config.*`, `vite.config.*`, `mix.exs` with `:phoenix`) and returns all three templates. Anything else falls back to setting `window.__HAVI_DEV__` by hand.
+- Omit it, or pass anything else, and the agent detects the framework from config files (`next.config.*`, `vite.config.*`, `mix.exs` with `:phoenix`) and returns all three templates. If none match, it asks you which framework you use.
 
 ## Package rules
 
