@@ -75,7 +75,7 @@ calls the `resolve_annotation` tool with the id, a note, and that commit. Unlike
 - `id` (required) — the annotation to resolve. Without it the prompt returns an error.
 - `note` (optional) — a short note describing the fix, dropped verbatim into the resolution. Omit it and the agent writes its own.
 
-### `setup_hooks`: attach project context to every capture
+### `setup-hooks`: attach project context to every capture
 
 Wires build- or boot-time context into the page so each annotation carries it.
 HAVI reads a global set at boot:
